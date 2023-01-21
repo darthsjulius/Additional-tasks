@@ -6,8 +6,11 @@ const users = [
    , {id: 4, posts: [{id: 41, tags: ["CSS"]}, {id: 42, tags: ["Python"]}, {id: 43, tags: []}]}
   ]
   
-  const usersThatPostedAboutPHP = 1;
+  
   
   /* сначала нужно создать переменную для каждого пользователя,
   затем найти всех у кого в тэгах есть PHP и вернуть их */
   
+ let usersId = users.map(item => item.id);
+ const usersThatPostedAboutPHP = usersId.filter(item => ('tags' == 'PHP') ? 1 : -1);
+
