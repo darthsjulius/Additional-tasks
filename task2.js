@@ -1,8 +1,10 @@
-function map(xs, arrow) {
+function map(xs, fnMap) {
     let arr = [];
+    let index = 0;
     for (let item of xs) {
-        let result = arrow(item, index, xs);
+        let result = fnMap(item, index, xs);
         arr.push(result);
+        index++;
     }
     return arr;
 }
