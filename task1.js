@@ -1,4 +1,7 @@
 function maximum1(xs) {
+    if (!xs.length) {
+        throw new Error('The function is not applicable to empty arrays');
+    }
     [...xs].sort((a, b) => (a>b) ? 1 : (a<b) ? -1 : 0);
     return xs.at(-1);
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Automatic Mocha testing basic script</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+        <script>
+            mocha.setup('bdd');
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+        <script>
+            let assert = chai.assert;
+        </script>
+    </head>
+    <body>
+        <script>
+            function maximum1(xs) {
+                if (!xs.length) {
+                throw new Error('The function is not applicable to empty arrays');
+                }
+                ys = [...xs];
+                ys.sort((a, b) => (a>b) ? 1 : (a<b) ? -1 : 0);
+                return ys.at(-1);
+            }
+        </script>
+        <script>
+            describe('maximum1', function() {
+                it('Finds max values in arrays', function() {
+                    assert.equal(maximum1([1, 2, 6, 8, 9, 75, 43]), 75);
+                });
+            
+            
+                it('Finds max values in arrays', function() {
+                    assert.equal(maximum1([15, 0.5, 0.6, -0.789]), 15);
+                });
+            
+            
+                it('Finds max values in arrays', function() {
+                    assert.equal(maximum1([73, 73.005, 73.00005, 73.05]), 73.05);
+                });
+            });
+        </script>
+        <div id="mocha"></div>
+        <script>
+            mocha.run();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Automatic Mocha testing basic script</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+        <script>
+            mocha.setup('bdd');
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+        <script>
+            let assert = chai.assert;
+        </script>
+    </head>
+    <body>
+        <script>
+            function filter(xs, fnFilter) {
+                let arr = [];
+                let index = 0;
+                for (let item of xs) {
+                    let result = fnFilter(item, index, xs);
+                    if (result == true) {
+                    arr.push(item);
+                    } 
+                index++;
+                }
+                return arr;
+            }
+        </script>
+        <script>
+            describe('filter', function() {
+                it('Mimics the filter method', function() {
+                    // some tests
+                });
+            });
+        </script>
+        <div id="mocha"></div>
+        <script>
+            mocha.run();
+        </script>
+    </body>
+</html>

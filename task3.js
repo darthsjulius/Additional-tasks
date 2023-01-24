@@ -1,8 +1,8 @@
-function filter(xs, arrow) {
+function filter(xs, fnFilter) {
     let arr = [];
     let index = 0;
     for (let item of xs) {
-        let result = arrow(item, index, xs);
+        let result = fnFilter(item, index, xs);
         if (result == true) {
             arr.push(item);
         } 
