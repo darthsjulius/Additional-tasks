@@ -31,7 +31,8 @@
         <script>
             describe('filter', function() {
                 it('Mimics the filter method', function() {
-                    // some tests
+                    assert.equal(filter([1, 5, 6, 99, 122],  
+                    item => item < 8), [1, 5, 6]);
                 });
             });
         </script>
