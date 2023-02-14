@@ -27,17 +27,17 @@
         <script>
             describe('maximum1', function() {
                 it('Finds max values in arrays', function() {
-                    assert.equal(maximum1([1, 2, 6, 8, 9, 75, 43]), 75);
+                    assert.deepEqual(maximum1([1, 2, 6, 8, 9, 75, 43]), 75);
                 });
             
             
                 it('Finds max values in arrays', function() {
-                    assert.equal(maximum1([15, 0.5, 0.6, -0.789]), 15);
+                    assert.deepEqual(maximum1([15, 0.5, 0.6, -0.789]), 15);
                 });
             
             
                 it('Finds max values in arrays', function() {
-                    assert.equal(maximum1([73, 73.005, 73.00005, 73.05]), 73.05);
+                    assert.deepEqual(maximum1([73, 73.005, 73.00005, 73.05]), 73.05);
                 });
             });
         </script>
