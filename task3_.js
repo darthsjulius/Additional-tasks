@@ -27,3 +27,19 @@ console.log(flattenObject({
   //"b.a": 1
   //"b.b": 3
   //"c.d.e": 0
+
+
+/*function flattenObject1(obj) {
+    let result = {};
+    for (let i in obj) {
+        if ((typeof obj[i] === 'object') && !Array/isArray(obj[i])) {
+            let temp = flattenObject1(obj[i]);
+            for (let j in temp) {
+                result[i + '.' + j] = temp[j];
+            }
+        } else {
+            result[i] = obj[i];
+        }
+    }
+    return result;
+}; */
