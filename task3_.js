@@ -32,7 +32,7 @@ console.log(flattenObject({
 /*function flattenObject1(obj) {
     let result = {};
     for (let i in obj) {
-        if ((typeof obj[i] === 'object') && !Array/isArray(obj[i])) {
+        if ((typeof obj[i] === 'object') && !Array.isArray(obj[i])) {
             let temp = flattenObject1(obj[i]);
             for (let j in temp) {
                 result[i + '.' + j] = temp[j];
@@ -43,3 +43,5 @@ console.log(flattenObject({
     }
     return result;
 }; */
+
+
